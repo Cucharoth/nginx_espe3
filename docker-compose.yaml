@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: build/Dockerfile
     ports:
-      - "28000:8080"
+      - "28000:80"
     networks:
       - esp3_network
 
