@@ -1,0 +1,15 @@
+
+services:
+  reverse-proxy.esp3.local:
+    container_name: reverse-proxy.esp3.local
+    build:
+      context: .
+      dockerfile: build/Dockerfile
+    ports:
+      - "28000:8080"
+    networks:
+      - esp3_network
+
+networks:
+  esp3_network:
+    external: true
